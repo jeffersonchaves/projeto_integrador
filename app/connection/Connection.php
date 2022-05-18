@@ -3,7 +3,7 @@
 class Connection {
 
     private $host = "localhost";
-    private $dbname = "projeto_integrador";
+    private $dbname = "projeto_integrador_2";
     private $user = "root";
     private $password = "password#22";
 

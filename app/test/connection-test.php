@@ -14,4 +14,6 @@
 
     $usuarios = $tabela->fetchAll(PDO::FETCH_ASSOC);
 
+    print "<pre>";
     print_r($usuarios);
+    print "</pre>";
