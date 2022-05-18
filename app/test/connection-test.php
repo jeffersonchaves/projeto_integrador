@@ -7,3 +7,11 @@
     require "../connection/Connection.php";
 
     $conn = new Connection();
+
+    $pdo = $conn->getConnection();
+
+    $tabela = $pdo->query("SELECT * FROM users");
+
+    $usuarios = $tabela->fetchAll(PDO::FETCH_ASSOC);
+
+    print_r($usuarios);
