@@ -19,13 +19,7 @@ class Connection {
         } catch(Exception $e) {
             print("Erro ao conectar com o banco de dados");
         }
-
-
-
         return $conn;
     }
 
 }
-
-$conn = new Connection();
-$conn->getConnection();
