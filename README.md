@@ -1,5 +1,5 @@
 ## Repositório da Disciplina de Projeto Integrador 2022
-### TADS IFPR - Foz
+### Técnico em Informática - IFPR
 
 O Objetivo da disciplina é o de **apoiar o desenvolvimento de uma aplicação web** seguindo uma arquitetura para aplicações web além de permitir a persistência de dados por meio de uma sistema de banco de dados.
 
