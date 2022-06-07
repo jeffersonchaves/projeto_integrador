@@ -1,57 +1,38 @@
 <?php
 
-    // Vale ouro
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-    
-    require __DIR__ . "/../connection/Connection.php";
-    require __DIR__ . "/Controller.php";
+// Vale ouro
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    function findAll(){
-        $conn = new Connection();
+require_once __DIR__ . "/../repositories/UserRepository.php";
+require_once __DIR__ . "/Controller.php";
 
-        $pdo = $conn->getConnection();
+function findAll()
+{
+    $repository = new UserRepository();
+    $usuarios = $repository->findAll();
 
-        $tabela = $pdo->query("SELECT * FROM users");
+    $data['titulo'] = "listar usuarios";
+    $data['usuarios'] = $usuarios;
 
-       $usuarios  = $tabela->fetchAll(PDO::FETCH_BOTH);
+    Controller::loadView("users/list.php", $data);
+}
 
-       $data['titulo'] = "listar usuarios";
-       $data['usuarios'] = $usuarios;
+function findUserById()
+{
+    print "chamou findUserById";
+}
 
-       Controller::loadView("users/list.php", $data);
-    }
+function deleteUser()
+{
+    print "chamou deleteUser";
+}
 
-    function findUserById(){
-        print "chamou findUserById";
-    }
+function preventDefault(){
 
-    function deleteUser(){
-        print "chamou deleteUser";
-    }
+}
 
-    $acao = $_GET['acao'];
-
-    switch ($acao) {
-        case 'listar':
-            findAll();
-            break;
-
-        case 'usuario':
-            findUserById();
-            break;
-
-        case 'deletar':
-            deleteUser();
-            break;
-        
-        default:
-            findAll();
-            break;
-    }
-
-  
-
-
-
+function acordaPedrinho(){
+    print "A cor da Pedrinho.";
+}

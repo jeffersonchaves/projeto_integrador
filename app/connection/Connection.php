@@ -2,24 +2,30 @@
 
 class Connection {
 
-    private $host = "localhost";
-    private $dbname = "projeto_integrador_2";
-    private $user = "root";
-    private $password = "password#22";
+    private static $host     = "localhost";
+    private static $dbname   = "projeto_integrador_2";
+    private static $user     = "root";
+    private static $password = "password#22";
 
-    public function getConnection(): PDO {
+    private static ?PDO $conn = null;
 
-        try {
-            $conn = new PDO("mysql:host=$this->host;dbname=$this->dbname", 
-            $this->user, 
-            $this->password);
+    public static function getConnection(): PDO {
 
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        if(self::$conn == null){
 
-        } catch(Exception $e) {
-            print("Erro ao conectar com o banco de dados");
+            try {
+                self::$conn = new PDO("mysql:host=".self::$host.";dbname=".self::$dbname, 
+                self::$user, 
+                self::$password);
+
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            } catch(Exception $e) {
+                print("Erro ao conectar com o banco de dados");
+            }
         }
-        return $conn;
+
+        return self::$conn;
     }
 
 }

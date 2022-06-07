@@ -13,7 +13,7 @@
 
     $tabela = $pdo->query("SELECT * FROM users");
 
-    $usuarios = $tabela->fetchAll(PDO::FETCH_BOTH);
+    $usuarios = $tabela->fetchAll(PDO::FETCH_ASSOC);
 
     print "<pre>";
     print_r($usuarios);
