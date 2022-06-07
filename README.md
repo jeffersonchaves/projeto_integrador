@@ -5,7 +5,7 @@ O Objetivo da disciplina é o de **apoiar o desenvolvimento de uma aplicação w
 
 A construção das aplicações deverá seguir as boas práticas e os padrões voltados para desenvolvimento de aplicações web.
 
-## ☕ Modelo
+### ☕ Modelo
 
 Este modelo, desenvolvido em aula, poderá se usado como base para o desenvolvimento do seu projeto.
 
