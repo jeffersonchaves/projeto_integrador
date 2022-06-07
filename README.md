@@ -5,18 +5,21 @@ O Objetivo da disciplina é o de **apoiar o desenvolvimento de uma aplicação w
 
 A construção das aplicações deverá seguir as boas práticas e os padrões voltados para desenvolvimento de aplicações web.
 
-## ☕ Modelo
+
+##### ☕ Modelo
 
 Este modelo, desenvolvido em aula, poderá se usado como base para o desenvolvimento do seu projeto.
 
-## 🤝 Contribuição
+
+##### 🤝 Contribuição
 
 Projeto aberto para contribuições!
 
 **Encontrou algum erro?**  Você pode me ajudar abrindo uma [**Issue**](https://github.com/jeffersonchaves/projeto_integrador/issues)
 **Enxergou uma solução ou melhoria?** Você pode fazer um [Pull request](https://github.com/jeffersonchaves/projeto_integrador/pulls)
 
-## 🔖 Licença
+
+##### 🔖 Licença
 [![LICENSA](https://img.shields.io/badge/Custom_GPL_3.0-E58080?style=for-the-badge&logo=bookstack&logoColor=white)](/LICENSE)
 
 Copyright © 2022 - [jefferson chaves](https://github.com/jeffersonchaves)
